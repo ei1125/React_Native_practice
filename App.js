@@ -16,11 +16,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   leftContainer: {
-    backgroundColor: 'red',
     width: 100
   },
   rightContainer: {
-    backgroundColor: 'blue',
     flex: 1
   }
 });
@@ -35,7 +33,14 @@ export default function App() {
             source={{uri: 'https://picsum.photos/id/10/200/200'}}
           />
         </View>
-        <View style={styles.rightContainer} />
+        <View style={styles.rightContainer} >
+          <Text numberOfLines={3}>
+          In the following example, the nested title and body text will inherit the fontFamily from styles.baseText, but the title provides its own additional styles. The title and body will stack on top of each other on account of the literal newlines:
+          </Text>
+          <Text>
+            React News
+          </Text>
+        </View>
       </View>
     </View>
   );

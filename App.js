@@ -19,8 +19,18 @@ const styles = StyleSheet.create({
     width: 100
   },
   rightContainer: {
-    flex: 1
-  }
+    flex: 1,
+    flexDirection: 'colum',
+    padding: 10,
+    justifyContent: 'space-between',
+  },
+  text: {
+    fontSize: 16,
+  },
+  subtext: {
+    fontSize: 12,
+    color: 'gray',
+  },
 });
 
 export default function App() {
@@ -34,10 +44,10 @@ export default function App() {
           />
         </View>
         <View style={styles.rightContainer} >
-          <Text numberOfLines={3}>
+          <Text numberOfLines={3} style={styles.text}>
           In the following example, the nested title and body text will inherit the fontFamily from styles.baseText, but the title provides its own additional styles. The title and body will stack on top of each other on account of the literal newlines:
           </Text>
-          <Text>
+          <Text style={styles.subtext}>
             React News
           </Text>
         </View>

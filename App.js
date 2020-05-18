@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import ListItem from './components/Listitem';
+import ListItem from './components/ListItem';
+import articles from './dummies/articles';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,16 +36,18 @@ const styles = StyleSheet.create({
 });
 
 export default function App() {
+  const items = articles.map( (article, index) => {return (
+    <ListItem
+      imageUrl={article.urlToImage}
+      title={article.title}
+      author={article.author}
+      key={index}
+    />
+  )})
+
   return (
     <View style={styles.container}>
-      <ListItem
-        imageUrl="https://picsum.photos/id/10/200/200" 
-        title="In the following example, the nested title and 
-        body text will inherit the fontFamily from styles.baseText, 
-        but the title provides its own additional styles. The title 
-        and body will stack on top of each other on account of the 
-        literal newlines:"
-        author="SampleNews" />
+      {items}
     </View>
   );
 }

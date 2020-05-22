@@ -5,7 +5,7 @@ export const addClip = ({clip}) => {
   };
 };
 
-export const addClip = ({clip}) => {
+export const deleteClip = ({clip}) => {
   return {
     type: 'DELETE_CLIP',
     clip,

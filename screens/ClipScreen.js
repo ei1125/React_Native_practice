@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ClipScreen = (navigation) => {
+export default ClipScreen = ({navigation}) => {
   const user = useSelector(state => state.user)
   const {clips} = user;
 

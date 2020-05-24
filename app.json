@@ -22,7 +22,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.react-native-practice.news-app"
+    },
+    "android": {
+      "package": "com.react_native_practice.news_app",
+      "versionCode": 1
     },
     "extra": {
       "newsApiKey": "0b78b06e63524d94924941d981f19bb4"
